@@ -4,11 +4,10 @@
 #include<time.h>
 #include <bits/stdc++.h>
 using namespace std;
-void InputMatrix (int **mas, int,int);
-void OutputMatrix (int **mas,int,int);
-void DeleteMatrix (int **mas,int,int);
+void inputMatrix (int **mas, int,int);
+void outputMatrix (int **mas,int,int);
+void deleteMatrix (int **mas,int,int);
 int main() {
-	system("color FD");
 	system("title M a t r i x   C a l c u l a t i o n");
 	int col1,row1,col2,row2;
 	int number;
@@ -32,35 +31,35 @@ int main() {
 					cin>>row1;
 					cout<<"cols=";
 					cin>>col1;
-					int **FirstMatrix=new int *[row1];
+					int **firstMatrix=new int *[row1];
 					for (int i=0;i<row1;i++){
-						FirstMatrix[i]=new int [col1];
+						firstMatrix[i]=new int [col1];
 					}
 					cout<<"Type in first matrix"<<endl;
-					InputMatrix (FirstMatrix,row1,col1);
-					int **SecondMatrix=new int *[row1];
+					inputMatrix (firstMatrix,row1,col1);
+					int **secondMatrix=new int *[row1];
 					for (int i=0;i<row1;i++){
-						SecondMatrix[i]=new int [col1];
+						secondMatrix[i]=new int [col1];
 					}
 					cout<<"Type in second matrix"<<endl;
-					InputMatrix (SecondMatrix,row1,col1);
-					int **ResultMatrix=new int *[row1];
+					inputMatrix (secondMatrix,row1,col1);
+					int **resultMatrix=new int *[row1];
 					for (int i=0;i<row1;i++){
-						ResultMatrix[i]=new int [col1];
+						resultMatrix[i]=new int [col1];
 					}
 					for (int i=0;i<row1;i++ ){
 						for (int j=0;j<col1;j++){
-							ResultMatrix[i][j]=FirstMatrix[i][j]+SecondMatrix[i][j];
+							resultMatrix[i][j]=firstMatrix[i][j]+secondMatrix[i][j];
 						}
 					}
-					OutputMatrix (FirstMatrix,row1,col1);
+					outputMatrix (firstMatrix,row1,col1);
 					cout<<"   +   "<<endl;
-					OutputMatrix (SecondMatrix,row1,col1);
+					outputMatrix (secondMatrix,row1,col1);
 					cout<<"Result of addition:"<<endl;
-					OutputMatrix (ResultMatrix,row1,col1);
-					DeleteMatrix (FirstMatrix,col1,row1);
-					DeleteMatrix (SecondMatrix,col1,row1);
-					DeleteMatrix (ResultMatrix,col1,row1);
+					outputMatrix (resultMatrix,row1,col1);
+					deleteMatrix (firstMatrix,col1,row1);
+					deleteMatrix (secondMatrix,col1,row1);
+					deleteMatrix (resultMatrix,col1,row1);
 					cout<<"Press any button to return to the menu"<<endl;
 					system("pause > nul");
 					break;
@@ -74,35 +73,35 @@ int main() {
 					cin>>row1;
 					cout<<"cols=";
 					cin>>col1;
-					int **FirstMatrix=new int *[row1];
+					int **firstMatrix=new int *[row1];
 					for (int i=0;i<row1;i++){
-						FirstMatrix[i]=new int [col1];
+						firstMatrix[i]=new int [col1];
 					}
 					cout<<"Type in first matrix"<<endl;
-					InputMatrix (FirstMatrix,row1,col1);
-					int **SecondMatrix=new int *[row1];
+					inputMatrix (firstMatrix,row1,col1);
+					int **secondMatrix=new int *[row1];
 					for (int i=0;i<row1;i++){
-						SecondMatrix[i]=new int [col1];
+						secondMatrix[i]=new int [col1];
 					}
 					cout<<"Type in second matrix"<<endl;
-					InputMatrix (SecondMatrix,row1,col1);
-					int **ResultMatrix=new int *[row1];
+					inputMatrix (secondMatrix,row1,col1);
+					int **resultMatrix=new int *[row1];
 					for (int i=0;i<row1;i++){
-						ResultMatrix[i]=new int [col1];
+						resultMatrix[i]=new int [col1];
 					}
 					for (int i=0;i<row1;i++ ){
 						for (int j=0;j<col1;j++){
-							ResultMatrix[i][j]=FirstMatrix[i][j]-SecondMatrix[i][j];
+							resultMatrix[i][j]=firstMatrix[i][j]-secondMatrix[i][j];
 						}
 					}
-					OutputMatrix (FirstMatrix,row1,col1);
+					outputMatrix (firstMatrix,row1,col1);
 					cout<<"   -   "<<endl;
-					OutputMatrix (SecondMatrix,row1,col1);
+					outputMatrix (secondMatrix,row1,col1);
 					cout<<"Result of subtraction:"<<endl;
-					OutputMatrix (ResultMatrix,row1,col1);
-					DeleteMatrix (FirstMatrix,col1,row1);
-					DeleteMatrix (SecondMatrix,col1,row1);
-					DeleteMatrix (ResultMatrix,col1,row1);
+					outputMatrix (resultMatrix,row1,col1);
+					deleteMatrix (firstMatrix,col1,row1);
+					deleteMatrix (secondMatrix,col1,row1);
+					deleteMatrix (resultMatrix,col1,row1);
 					cout<<"Press any button to return to the menu"<<endl;
 					system("pause > nul");
 					break;
@@ -116,47 +115,47 @@ int main() {
 					cin>>row1;
 					cout<<"cols=";
 					cin>>col1;
-					int **FirstMatrix=new int *[row1];
+					int **firstMatrix=new int *[row1];
 					for (int i=0;i<row1;i++){
-						FirstMatrix[i]=new int [col1];
+						firstMatrix[i]=new int [col1];
 					}
 					cout<<"Type in first matrix"<<endl;
-					InputMatrix (FirstMatrix,row1,col1);
+					inputMatrix (firstMatrix,row1,col1);
 					cout<<"Type in number of rows and cols of second matrix."<<endl<<"Number of rows of second matrix must match cols of first"<<endl<<"rows=";
 					cin>>row2;
 					cout<<"cols=";
 					cin>>col2;
-					int **SecondMatrix=new int *[row2];
+					int **secondMatrix=new int *[row2];
 					for (int i=0;i<row2;i++){
-						SecondMatrix[i]=new int [col2];
+						secondMatrix[i]=new int [col2];
 					}
 					cout<<"Type in second matrix"<<endl;
-					InputMatrix (SecondMatrix,row2,col2);
+					inputMatrix (secondMatrix,row2,col2);
 					if (col1!=row2){
 						cout<<"The operation is not possible for the given matrix size"<<"Please change cize of matrix";
 					}
 					else {
-						int **ResultMatrix=new int *[row1];
+						int **resultMatrix=new int *[row1];
 						for (int i=0;i<row1;i++){
-							ResultMatrix[i]=new int [col2];
+							resultMatrix[i]=new int [col2];
 						}
 						for (int i=0;i<row1;i++ ){
 							for (int j=0;j<col2;j++){
-								ResultMatrix[i][j]=0;
+								resultMatrix[i][j]=0;
 								for (int k = 0; k < col1; k++){
-									ResultMatrix[i][j]+=FirstMatrix[i][k]*SecondMatrix[k][j];
+									resultMatrix[i][j]+=firstMatrix[i][k]*secondMatrix[k][j];
 								}
 							}
 						}
-						OutputMatrix (FirstMatrix,row1,col1);
+						outputMatrix (firstMatrix,row1,col1);
 						cout<<"   *   "<<endl;
-						OutputMatrix (SecondMatrix,row2,col2);
+						outputMatrix (secondMatrix,row2,col2);
 						cout<<"Result of multiplication:"<<endl;
-						OutputMatrix (ResultMatrix,row1,col2);
-						DeleteMatrix (ResultMatrix,col2,row1);
+						outputMatrix (resultMatrix,row1,col2);
+						deleteMatrix (resultMatrix,col2,row1);
 					}
-					DeleteMatrix (FirstMatrix,col1,row1);
-					DeleteMatrix (SecondMatrix,col1,row1);
+					deleteMatrix (firstMatrix,col1,row1);
+					deleteMatrix (secondMatrix,col1,row1);
 					cout<<"Press any button to return to the menu"<<endl;
 					system("pause > nul");
 				 	break;
@@ -170,29 +169,29 @@ int main() {
 					cin>>row1;
 					cout<<"cols=";
 					cin>>col1;
-					int **Matrix=new int *[row1];
+					int **matrix=new int *[row1];
 					for (int i=0;i<row1;i++){
-						Matrix[i]=new int [col1];
+						matrix[i]=new int [col1];
 					}
 					cout<<"Type in matrix"<<endl;
-					InputMatrix (Matrix,row1,col1);
+					inputMatrix (matrix,row1,col1);
 					int multiplier;
 					cout<<"Type in multiplier-number ";
 					cin>>multiplier;
-					int **ResultMatrix=new int *[row1];
+					int **resultMatrix=new int *[row1];
 					for (int i=0;i<row1;i++){
-						ResultMatrix[i]=new int [col1];
+						resultMatrix[i]=new int [col1];
 					}
 					for (int i=0;i<row1;i++ ){
 						for (int j=0;j<col1;j++){
-							ResultMatrix[i][j]=Matrix[i][j]*multiplier;
+							resultMatrix[i][j]=matrix[i][j]*multiplier;
 						}
 					}
-					OutputMatrix (Matrix,row1,col1);
+					outputMatrix (matrix,row1,col1);
 					cout<<" * "<<multiplier<<" ="<<endl;
-					OutputMatrix (ResultMatrix,row1,col1);
-					DeleteMatrix (Matrix,col1,row1);
-					DeleteMatrix (ResultMatrix,col1,row1);
+					outputMatrix (resultMatrix,row1,col1);
+					deleteMatrix (matrix,col1,row1);
+					deleteMatrix (resultMatrix,col1,row1);
 					cout<<"Press any button to return to the menu"<<endl;	
 					system("pause > nul");
 					break;
@@ -206,26 +205,26 @@ int main() {
 					cin>>row1;
 					cout<<"cols=";
 					cin>>col1;
-					int **Matrix=new int *[row1];
+					int **matrix=new int *[row1];
 					for (int i=0;i<row1;i++){
-						Matrix[i]=new int [col1];
+						matrix[i]=new int [col1];
 					}
 					cout<<"Type in matrix"<<endl;
-					InputMatrix (Matrix,row1,col1);
-					int **ResultMatrix=new int *[row1];
+					inputMatrix (matrix,row1,col1);
+					int **resultMatrix=new int *[row1];
 					for (int i=0;i<row1;i++){
-						ResultMatrix[i]=new int [col1];
+						resultMatrix[i]=new int [col1];
 					}
 					for (int i=0;i<col1;i++ ){
 						for (int j=0;j<row1;j++){
-							ResultMatrix[i][j]=Matrix[j][i];
+							resultMatrix[i][j]=matrix[j][i];
 						}
 					}
-					OutputMatrix (Matrix,row1,col1);
+					outputMatrix (matrix,row1,col1);
 					cout<<"Result of transposition:"<<endl;
-					OutputMatrix (ResultMatrix,row1,col1);
-					DeleteMatrix (Matrix,col1,row1);
-					DeleteMatrix (ResultMatrix,col1,row1);
+					outputMatrix (resultMatrix,row1,col1);
+					deleteMatrix (matrix,col1,row1);
+					deleteMatrix (resultMatrix,col1,row1);
 					cout<<"Press any button to return to the menu"<<endl;
 					system("pause > nul");
 					break;	
@@ -245,7 +244,7 @@ int main() {
 			}
 		}
 	}
-void InputMatrix (int **mas,int col,int row){
+void inputMatrix (int **mas,int col,int row){
 	for (int i=0;i<col;i++){
 		for (int j=0;j<row;j++){
 			cout<<"["<<i<<"]["<<j<<"] =";
@@ -253,7 +252,7 @@ void InputMatrix (int **mas,int col,int row){
 		}
 	}
 }
-void OutputMatrix (int **mas, int col,int row){
+void outputMatrix (int **mas, int col,int row){
 	for (int i=0;i<col;i++){
 		for (int j=0;j<row;j++){
 			cout<<mas[i][j]<<"  ";
@@ -261,7 +260,7 @@ void OutputMatrix (int **mas, int col,int row){
 		cout<<endl;
 	}
 }
-void DeleteMatrix (int **mas,int col,int row){
+void deleteMatrix (int **mas,int col,int row){
 	for (int i=0; i<row;i++){
 		delete []mas[i];
 	}
